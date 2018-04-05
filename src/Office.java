@@ -19,7 +19,7 @@ public class Office {
     }
 
     public void showEmployeeList(){
-        for(Employee element : this.list){
+            for(Employee element : this.list){
             System.out.print(element.getLastName()+ " ");
             System.out.print(element.getFirstName()+" ");
             System.out.print(element.getSalary()+" ");
@@ -31,5 +31,13 @@ public class Office {
     }
     public ArrayList<Employee> getList(){
         return list;
+    }
+    public void sort(){
+        List<Integer> intList = new ArrayList();
+            for (Employee employee: this list){
+
+
+            }
+        }
     }
 }

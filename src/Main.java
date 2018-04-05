@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +24,7 @@ public class Main {
         String rankName = in.next();
         Rank rank = Rank.getRank(rankName);
         if (rank == null) {
-            System.out.println("Неизвестная должность" + rankName);
+            System.out.println("Неизвестная должность " + rankName);
         } else {
             for (Employee employee : office.find(rank)) {
                 System.out.println(employee);
@@ -36,7 +38,9 @@ public class Main {
                 fill();
                 outInfo();
             }
+            find();
 
 
         }
+
     }
