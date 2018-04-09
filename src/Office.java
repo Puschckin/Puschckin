@@ -21,17 +21,11 @@ public class Office {
 
     public void showEmployeeList(){
             for(Employee element : this.list){
-            System.out.print(element.getLastName()+ " ");
-            System.out.print(element.getFirstName()+ " ");
-            System.out.print(element.getSalary()+ " ");
-            System.out.println(element.getRank());
+                System.out.print(element.toString());
         }
     }
     public void add(Employee employee) {
         list.add(employee);
-    }
-    public ArrayList<Employee> getList(){
-        return list;
     }
     public void sort(){
        for (int i = list.size() - 1; i > 0; i--){

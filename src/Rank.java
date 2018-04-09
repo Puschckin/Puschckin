@@ -17,14 +17,6 @@ public enum Rank {
     public String getName(){
         return name;
     }
-    public static boolean isRankExist(String rankName){
-        for (Rank element: values()){
-            if (rankName.equals(element.getName())){
-                return true;
-            }
-        }
-        return false;
-    }
     public static Rank getRank(String rankName) {
         for (Rank element: values()){
             if (rankName.equals(element.getName())){
@@ -33,12 +25,5 @@ public enum Rank {
         }
         return null;
     }
-    public boolean isRankExist(Rank rank){
-        for (Rank element: values()){
-            if (rank == element ){
-                return  true;
-            }
-        }
-        return false;
-    }
+
 }

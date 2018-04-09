@@ -26,28 +26,50 @@ public class Main {
         if (rank == null) {
             System.out.println("Неизвестная должность " + rankName);
         } else {
-            for (Employee employee : office.find(rank)) {
-                System.out.println(employee);
-            }
+            if (office.find(rank).size() != 0) {
+                for (Employee employee : office.find(rank)) {
+                    System.out.println(employee);
+                }
+            } else System.out.println("Нет должности в списке");
         }
     }
-    public static void sort1(){
+
+    public static void sort1() {
         office.sort();
         office.showEmployeeList();
     }
 
-    public static void main (String[]args){
+    public static void main(String[] args) {
         System.out.println("Введите команду");
-        String command = in.next();
-        if (command.equals("fill")) {
-            fill();
-            //outInfo();
-            sort1();
+        Boolean P = true;
+        while (P) {
+            System.out.println("1: Заполнить список сотрудников");
+            System.out.println("2: Вывести сотрудников");
+            System.out.println("3: Отсортировать и вывести");
+            System.out.println("4: Поиск по должности ");
+            System.out.println("5: Выход ");
+            String command = in.next();
+            switch (command) {
+                case "1":
+                    System.out.println("Укажите число сотрудников. Введите фамилию работника, имя, зарплату и должность ");
+                    fill();
+                    break;
+                case "2":
+                    outInfo();
+                    break;
+                case "3":
+                    sort1();
+                    break;
+                case "4":
+                    System.out.println("Введите должность ");
+                    find();
+                    break;
+
+                case "5":
+                    P = false;
+                    break;
+            }
+
         }
-        find();
-
-
-
-        }
-
     }
+}
