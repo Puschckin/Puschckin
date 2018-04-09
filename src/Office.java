@@ -18,11 +18,12 @@ public class Office {
         return result;
     }
 
+
     public void showEmployeeList(){
             for(Employee element : this.list){
             System.out.print(element.getLastName()+ " ");
-            System.out.print(element.getFirstName()+" ");
-            System.out.print(element.getSalary()+" ");
+            System.out.print(element.getFirstName()+ " ");
+            System.out.print(element.getSalary()+ " ");
             System.out.println(element.getRank());
         }
     }
@@ -33,10 +34,13 @@ public class Office {
         return list;
     }
     public void sort(){
-        List<Integer> intList = new ArrayList();
-            for (Employee employee: this list){
-
-
+       for (int i = list.size() - 1; i > 0; i--){
+           for (int j = 0; j < i; j++){
+               if (list.get(j).compareTo(list.get(j + 1))>0){
+                   Employee buf = list.get(j);
+                   list.set(j, list.get(j + 1));
+                   list.set(j + 1, buf);
+               }
             }
         }
     }

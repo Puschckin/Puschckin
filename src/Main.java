@@ -31,14 +31,21 @@ public class Main {
             }
         }
     }
-        public static void main (String[]args){
-            System.out.println("Введите команду");
-            String command = in.next();
-            if (command.equals("fill")) {
-                fill();
-                outInfo();
-            }
-            find();
+    public static void sort1(){
+        office.sort();
+        office.showEmployeeList();
+    }
+
+    public static void main (String[]args){
+        System.out.println("Введите команду");
+        String command = in.next();
+        if (command.equals("fill")) {
+            fill();
+            //outInfo();
+            sort1();
+        }
+        find();
+
 
 
         }
